@@ -114,16 +114,14 @@ public class MainFrame extends javax.swing.JFrame {
                 + "L_Color VARCHAR(30), "
                 + "FOREIGN KEY (O_Cod) REFERENCES Objetos(O_Cod))");
 
-        // Inicializamos/Actualizamos la lista de personas del formulario
-        // para que muestre las personas que ya están cargadas en el sistema
+
         updateListaResultados();
     }
 
     private void updateListaResultados() throws SQLException {
         // realiza la consulta "SELECT * FROM ejemplo_personas" a la base de datos
-        // utilizando la conexión ya establecida (almacenada en la variable conn).
-        // Finalmente muestra el resultado de la consulta en la tabla principal
-        // del programa (jTablaPersonas).
+
+        
         query = conn.createStatement();
 
         result = query.executeQuery(
